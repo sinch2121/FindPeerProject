@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FindPeer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+     <link href="https://fonts.googleapis.com/css2?family=Ingrid+Darling&family=Lato:wght@300&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300&display=swap" rel="stylesheet">
+   
+    </head>
+    <body>
+        <section class="first">
+        <h2>FindPeer</h2>
+        <div class="navbar">
+            <!-- Navbar links -->
+            <a href="#Home">Home</a>
+            <a href="#About Us">About Us</a>
+            <a href="#Reach out">Reach out</a>
+            <a href="#Sign-in"id="signin-link" class="signin">Sign in</a>
+        </div>
+
+        <div class="signin-modal" id="signin-modal">
+          <div class="signin-content">
+            <span class="close" id="close">&times;</span>
+            <h2>Sign In</h2>
+            <form>
+              <!-- Your sign-in form fields here -->
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="email"placeholder="Enter your email">
+              </div>
+              <div class="form-group">
+                <label for="username" class="name">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+              </div>
+              <div class="form-group">
+                <label for="password" class="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+              </div>
+              <button type="submit" id="proceedBtn">Proceed further</button>
+            </form>
+          </div>
+        </div>
+        
+
+
+        <div class="stat1">
+      <h4>Where <span class="animated-text">ideas</span> find their <br> perfect match! </h4>
+      <p class="animate__animated animate__backInLeft">Connect, Collaborate, Create. Your shortcut to assembling the perfect team for your projects.</p>
+      <a href="#" class="discover-button">Discover Teams</a>
+      </div>
+<script>
+      const signinLink = document.getElementById('signin-link');
+const signinModal = document.getElementById('signin-modal');
+const closeBtn = document.getElementById('close');
+
+signinLink.addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent default link behavior
+  signinModal.style.display = 'flex'; // Display the modal
+});
+
+closeBtn.addEventListener('click', function() {
+  signinModal.style.display = 'none'; // Hide the modal when close button is clicked
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target == signinModal) {
+    signinModal.style.display = 'none'; // Hide the modal when clicked outside
+  }
+});
+document.addEventListener("DOMContentLoaded", function() {
+  var proceedBtn = document.getElementById("proceedBtn");
+
+  proceedBtn.addEventListener("click", function(event) {
+    // Prevent the default form submission behavior
+    event.preventDefault();
+
+    // Retrieve values from input fields if needed
+    var email = document.getElementById("email").value;
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Redirect to a new page
+    window.location.href = "index2.html"; // Change "new_page.html" to your desired page URL
+  });
+});
+
+
+</script>
+        </body>
+    </html>
+      
